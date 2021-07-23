@@ -24,6 +24,9 @@ public class PlayerListener implements Listener {
     public void onRightClick(PlayerInteractEvent e) {
         Player player = e.getPlayer();
 
+        if (e.getItem() == null) {
+            return;
+        }
         if (!ItemUtils.isFot(e.getItem()))
             return;
 
